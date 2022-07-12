@@ -3,45 +3,64 @@ class DonutMaker {
         this._donuts = donuts;
         this._autoClickers = autoClickers;
         this._multiplier = multiplier;
-        this._autoClickersCost = 10;
+        this._autoClickersCost = 20;
         this._multiplierCost = 10;
     }
 
     get donuts() {
-        return this._donuts;
+        return parseFloat((this._donuts).toFixed(4));
     }
     set donuts(value) {
         this._donuts = value;
     }
     get autoClickers() {
-        return this._autoClickers;
+        return parseFloat((this._autoClickers).toFixed(4));
     }
     get multiplier() {
-        return this._multiplier;
+        return parseFloat((this._multiplier).toFixed(4));
     }
-    get autoClickersCost(){
-        return this._autoClickersCost;
+    get autoClickersCost() {
+        return parseFloat((this._autoClickersCost).toFixed(4));
     }
-    get multiplierCost(){
-        return this._multiplierCost;
+    get multiplierCost() {
+        return parseFloat((this._multiplierCost).toFixed(4));
     }
 
     makeDonuts() {
-        this._donuts++;
+        if (this._multiplier >= 1) {
+            this._donuts += Math.pow(1.2, this._multiplier);
+        } else {
+            this._donuts++;
+        }
     }
-    makeDonutsWithAutoClickers(){
-        this._donuts+=this._autoClickers;
+
+    makeDonutsWithAutoClickers() {
+        if (this._multiplier >= 1 && this._autoClickers >=1) {
+            this._donuts += this._autoClickers + Math.pow(1.2, this._multiplier);
+        } else {
+            this._donuts += this._autoClickers;
+        }
+
+    }
+    donutsPerClicks() {
+        return parseFloat(Math.pow(1.2, this._multiplier).toFixed(4));
     }
 
     buyAutoClicker() {
         if (this._donuts >= this._autoClickersCost) {
             this._autoClickers++;
             this._donuts -= this._autoClickersCost;
-            this._autoClickersCost += Math.floor(this._autoClickersCost*0.1);
+            this._autoClickersCost += this._autoClickersCost * 0.1;
         }
     }
 
-
+    buyMultiplier() {
+        if (this._donuts >= this._multiplierCost) {
+            this._multiplier++;
+            this._donuts -= this._multiplierCost;
+            this._multiplierCost += this._multiplierCost * 0.1;
+        }
+    }
 
 }
 export default DonutMaker;
