@@ -10,14 +10,11 @@ class DonutMaker {
     get donuts() {
         return parseFloat((this._donuts).toFixed(4));
     }
-    set donuts(value) {
-        this._donuts = value;
-    }
     get autoClickers() {
-        return parseFloat((this._autoClickers).toFixed(4));
+        return this._autoClickers;
     }
     get multiplier() {
-        return parseFloat((this._multiplier).toFixed(4));
+        return this._multiplier;
     }
     get autoClickersCost() {
         return parseFloat((this._autoClickersCost).toFixed(4));
@@ -32,18 +29,6 @@ class DonutMaker {
         } else {
             this._donuts++;
         }
-    }
-
-    makeDonutsWithAutoClickers() {
-        if (this._multiplier >= 1 && this._autoClickers >=1) {
-            this._donuts += this._autoClickers + Math.pow(1.2, this._multiplier);
-        } else {
-            this._donuts += this._autoClickers;
-        }
-
-    }
-    donutsPerClicks() {
-        return parseFloat(Math.pow(1.2, this._multiplier).toFixed(4));
     }
 
     buyAutoClicker() {
@@ -62,5 +47,33 @@ class DonutMaker {
         }
     }
 
+    donutsMultipliedPerClicks() {
+        return parseFloat(Math.pow(1.2, this._multiplier).toFixed(4));
+    }
+
+    totalDonutsPerSecondToShow() {
+        let multiplierVal = this.donutsMultipliedPerClicks();
+        if (this._autoClickers == 0) {
+            return parseFloat(Math.pow(1.2, this._multiplier).toFixed(4));
+        } else {
+            return parseFloat((multiplierVal * this._autoClickers).toFixed(4));
+        }
+    }
+
+    makeDonutsWithAutoClickers() {
+        if (this._multiplier >= 1 && this._autoClickers >= 1) {
+            this._donuts += this._autoClickers * Math.pow(1.2, this._multiplier);
+        } else {
+            this._donuts += this._autoClickers;
+        }
+    }
+
+    resetAll() {
+        this._donuts = 0;
+        this._autoClickers = 0;
+        this._autoClickersCost = 20;
+        this._multiplier = 0;
+        this._multiplierCost = 10;
+    }
 }
 export default DonutMaker;
