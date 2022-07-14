@@ -1,0 +1,101 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: darkgrey;
+  height: 100vh;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  background-color: grey;
+  height: 5rem;
+}
+.navigationBar {
+  height: 5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+}
+
+.dropdown {
+  position:relative;
+  display: inline-block;
+}
+
+.company {
+  font-size: 3rem;
+  font-family:cursive;
+}
+.dropdown-content-company {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content-company {
+  display: block;
+}
+
+.inspiration {
+  font-size: 2rem;
+  font-family:cursive;
+}
+.inspiration a{
+  text-decoration: none;
+  color: white;
+}
+.dropdown-content-inspiration {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content-inspiration {
+  display: block;
+}
+
+.contacts{
+  font-size: 2rem;
+  font-family:cursive;
+}
+.dropdown-content-contacts {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 80px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown:hover .dropdown-content-contacts {
+  display: block;
+}
+
+#donutImg {
+  animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+  
+}

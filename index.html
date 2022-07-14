@@ -6,53 +6,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donut Clicker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div class="container">
     <header>
-      <nav>
-        <li>Fred the Baker Baking Company</li>
-        <li>Cookie Clicker</li>
-        <li>Contacts</li>
+      <nav class="navigationBar">
+        <div class="dropdown">
+          <span class = "company">Fred the Baking Company</span>
+          <div class="dropdown-content-company">
+            <p>This is where the information about the company will go
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae blanditiis fugiat ratione nam? Dolorem,
+              perspiciatis voluptates? Quam qui vel ad aliquam unde repudiandae minus pariatur facere magni, molestiae
+              nulla quisquam!
+            </p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class = "inspiration"><a href="https://orteil.dashnet.org/cookieclicker/" target="blank">Cookie Clicker</a></span>
+          <div class="dropdown-content-inspiration">
+            <p>The inspiration for this game</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class = "contacts">Contacts</span>
+          <div class="dropdown-content-contacts">
+            <p>LinkedIN</p>
+            <p>GitHub</p>
+            <p>Portfolio</p>
+          </div>
+        </div>
+
       </nav>
     </header>
     <hr>
+
     <main>
-
-      <section id = "donutMaker">
-        <!-- <button id = "donutMakerBtn">DONUTS!!!</button> -->
-        <img src="https://openclipart.org/image/800px/248894" id = "donutImg" height ="80" width="100" />
-        <p id = "donutAmountMsg">0 donuts</p>
-        <p id = "totalDonutsPerSecond">Total number of donuts being generated</p>
+      <section id="donutMaker">
+        <img id="donutImg" src="/donut.png"  height="400" width="400"/>
+        <p id="donutAmountMsg">0 donuts</p>
+        <p id="totalDonutsPerSecond">Total number of donuts being generated</p>
       </section>
-
       <hr>
 
-      <section id = "autoClicker">
-        <button id = "autoClickBtn">BuyAutoClick</button>
-        <p id = "autoClicksPerSecond">0 clicks per second</p>
-        <p  id = "numberOfAutoClickers">Number of Auto Clicker: 0</p>
-        <p id = "costOfAutoClicker">Cost of next auto clicker: 100</p>
+      <section id="autoClicker">
+        <button id="autoClickBtn">BuyAutoClick</button>
+        <p id="autoClicksPerSecond">0 clicks per second</p>
+        <p id="numberOfAutoClickers">Number of Auto Clicker: 0</p>
+        <p id="costOfAutoClicker">Cost of next auto clicker: 100</p>
       </section>
-
       <hr>
 
-      <section id = "multiplier">
-        <button id = "multiplierBtn">BuyMultiplier</button>
-        <p id = "multiplierPerClick">1 donuts per clicks</p>
-        <p id = "numberOfMultiplier">Number of Multiplier: 0</p>
-        <p id = "costOfMultiplier">Cost of next multiplier: 10</p>
+      <section id="multiplier">
+        <button id="multiplierBtn">BuyMultiplier</button>
+        <p id="multiplierPerClick">1 donuts per clicks</p>
+        <p id="numberOfMultiplier">Number of Multiplier: 0</p>
+        <p id="costOfMultiplier">Cost of next multiplier: 10</p>
       </section>
-
       <hr>
 
-      <section id = "reset">
-        <button id = "resetBtn">RESET</button>
+      <section id="reset">
+        <button id="resetBtn">RESET</button>
       </section>
-
     </main>
-
   </div>
   <script src="./index.js" type="module"></script>
 </body>
