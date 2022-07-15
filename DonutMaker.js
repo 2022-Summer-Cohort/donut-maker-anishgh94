@@ -53,9 +53,13 @@ class DonutMaker {
 
     totalDonutsPerSecondToShow() {
         let multiplierVal = this.donutsMultipliedPerClicks();
-        if (this._autoClickers == 0) {
+        if (this._autoClickers == 0 && this._multiplier == 0) {
+            return 0;
+        }
+        else if (this._autoClickers == 0) {
             return parseFloat(Math.pow(1.2, this._multiplier).toFixed(4));
-        } else {
+        }
+        else {
             return parseFloat((multiplierVal * this._autoClickers).toFixed(4));
         }
     }

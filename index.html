@@ -14,7 +14,7 @@
     <header>
       <nav class="navigationBar">
         <div class="dropdown">
-          <span class = "company">Fred the Baking Company</span>
+          <span class="company">Fred the Baking Company</span>
           <div class="dropdown-content-company">
             <p>This is where the information about the company will go
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae blanditiis fugiat ratione nam? Dolorem,
@@ -24,51 +24,52 @@
           </div>
         </div>
         <div class="dropdown">
-          <span class = "inspiration"><a href="https://orteil.dashnet.org/cookieclicker/" target="blank">Cookie Clicker</a></span>
+          <span class="inspiration"><a href="https://orteil.dashnet.org/cookieclicker/" target="blank">Cookie
+              Clicker</a></span>
           <div class="dropdown-content-inspiration">
             <p>The inspiration for this game</p>
           </div>
         </div>
         <div class="dropdown">
-          <span class = "contacts">Contacts</span>
+          <span class="contacts">Contacts</span>
           <div class="dropdown-content-contacts">
             <p>LinkedIN</p>
             <p>GitHub</p>
             <p>Portfolio</p>
           </div>
         </div>
-
       </nav>
     </header>
-    <hr>
 
     <main>
       <section id="donutMaker">
-        <img id="donutImg" src="/donut.png"  height="400" width="400"/>
         <p id="donutAmountMsg">0 donuts</p>
         <p id="totalDonutsPerSecond">Total number of donuts being generated</p>
+        <img id="donutImg" src="/donut.png" height="400" width="400" />
       </section>
-      <hr>
 
-      <section id="autoClicker">
-        <button id="autoClickBtn">BuyAutoClick</button>
-        <p id="autoClicksPerSecond">0 clicks per second</p>
-        <p id="numberOfAutoClickers">Number of Auto Clicker: 0</p>
-        <p id="costOfAutoClicker">Cost of next auto clicker: 100</p>
-      </section>
-      <hr>
+      <div class="otherElements">
+        <section id="autoClicker">
+          <p id = "autoClickerText">Auto Clicker</p>
+          <img id = "autoClickImg" src="/autoclicker.png" height="80" width="80">
+          <p id="numberOfAutoClickers">X 0</p>
+          <p id="costOfAutoClicker">Next Clicker: 20</p>
+          <p id="autoClicksPerSecond">Per Second: 0 donuts</p>
+        </section>
+        <br>
+        <section id="multiplier">
+          <p id = "multiplierText">Multiplier</p>
+          <img id = "multiplierImg"src="/finalmultiplier.png" height="80" width="80">
+          <p id="numberOfMultiplier">X 0</p>
+          <p id="costOfMultiplier">Next Multiplier: 10</p>
+          <p id="multiplierPerClick">Per Click: 1 donuts</p>
+        </section>
+        <br>
+        <section id="reset">
+          <button id="resetBtn">RESET</button>
+        </section>
+      </div>
 
-      <section id="multiplier">
-        <button id="multiplierBtn">BuyMultiplier</button>
-        <p id="multiplierPerClick">1 donuts per clicks</p>
-        <p id="numberOfMultiplier">Number of Multiplier: 0</p>
-        <p id="costOfMultiplier">Cost of next multiplier: 10</p>
-      </section>
-      <hr>
-
-      <section id="reset">
-        <button id="resetBtn">RESET</button>
-      </section>
     </main>
   </div>
   <script src="./index.js" type="module"></script>
