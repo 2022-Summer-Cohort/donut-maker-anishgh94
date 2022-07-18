@@ -51,10 +51,10 @@ resetEl.addEventListener("click", () => {
   donut.resetAll();
   numberOfDonutsEl.innerText = donut.donuts + " donuts";
   totalDonutsPerSecondToShowEl.innerText = 0 + " per second";
-  autoClicksPerSecondEl.innerText = donut.autoClickers + " clicks per second";
-  numberOfAutoClickersEl.innerText = "Number of Auto Clicker: " + donut.autoClickers;
-  costOfAutoClickersEl.innerText = "Cost of next auto clicker: " + donut.autoClickersCost;
-  multiplierPerClickEl.innerText = donut.donutsMultipliedPerClicks() + " donuts per clicks";
-  numberOfMultiplierEl.innerText = "Number of Multiplier: " + donut.multiplier;
-  costOfMultiplierEl.innerText = "Cost of next multiplier: " + donut.multiplierCost;
+  autoClicksPerSecondEl.innerText = "Per Second: " + donut.autoClickers + " donuts";
+  numberOfAutoClickersEl.innerText = "X " + donut.autoClickers;
+  costOfAutoClickersEl.innerText = "Next Clicker: " + donut.autoClickersCost;
+  multiplierPerClickEl.innerText = "Per Click: " + donut.donutsMultipliedPerClicks() + " donuts";
+  numberOfMultiplierEl.innerText = "X " + donut.multiplier;
+  costOfMultiplierEl.innerText = "Next Multiplier: " + donut.multiplierCost;
 })
