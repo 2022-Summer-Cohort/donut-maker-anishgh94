@@ -94,6 +94,14 @@ header {
   display: block;
 }
 
+.dropdown-content-contacts li{
+  text-align: center;
+}
+.dropdown-content-contacts li a{
+  color: white;
+  font-size: 200%;
+}
+
 #donutImg {
   animation: rotation 8s infinite linear;
 }

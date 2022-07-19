@@ -3,7 +3,7 @@ class DonutMaker {
         this._donuts = donuts;
         this._autoClickers = autoClickers;
         this._multiplier = multiplier;
-        this._autoClickersCost = 20;
+        this._autoClickersCost = 100;
         this._multiplierCost = 10;
     }
 
