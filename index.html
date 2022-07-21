@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donut Clicker</title>
-  </head>
-  <body>
-    <div class="container"></div>
-    <script src="./index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donut Clicker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="navigationBar">
+        <div class="dropdown">
+          <span class="company">Fred the Baking Company</span>
+          <div class="dropdown-content-company">
+            <p>A game that uses button clicks to create virtual donuts for the world to enjoy.
+              Click on donuts to increase donut counts, use the donuts you generated to buy
+              auto clickers and multipliers to speed up as well as automate the process
+              of donut making. Buy enough auto clickers and multipliers and watch your
+              number of donuts count go up.
+            </p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="inspiration"><a href="https://orteil.dashnet.org/cookieclicker/" target="blank">Cookie
+              Clicker</a></span>
+          <div class="dropdown-content-inspiration">
+            <p>This little game is inspired by the game Cookie Clicker.
+              Click on the name to go to the original game.
+            </p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <span class="contacts">Contacts</span>
+          <div class="dropdown-content-contacts">
+            <li><a href="https://github.com/anishgh94" target="blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/anishghimire94/" target="blank"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li><a href="https://anishgh94.github.io/" target="blank"><i class="fa fa-user-circle"></i></a></li>
+            
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="donutMaker">
+        <p id="donutAmountMsg">0 donuts</p>
+        <p id="totalDonutsPerSecond">Total number of donuts being generated</p>
+        <img id="donutImg" src="/donut.png" height="400" width="400" />
+      </section>
+
+      <div class="otherElements">
+        <section id="autoClicker">
+          <p id="autoClickerText">Auto Clicker</p>
+          <img id="autoClickImg" src="/autoclicker.png" height="80" width="80">
+          <p id="numberOfAutoClickers">X 0</p>
+          <p id="costOfAutoClicker">Next Clicker: 100</p>
+          <p id="autoClicksPerSecond">Per Second: 0 donuts</p>
+        </section>
+        <br>
+        <section id="multiplier">
+          <p id="multiplierText">Multiplier</p>
+          <img id="multiplierImg" src="/finalmultiplier.png" height="80" width="80">
+          <p id="numberOfMultiplier">X 0</p>
+          <p id="costOfMultiplier">Next Multiplier: 10</p>
+          <p id="multiplierPerClick">Per Click: 1 donuts</p>
+        </section>
+        <br>
+        <section id="reset">
+          <button id="resetBtn">RESET</button>
+        </section>
+      </div>
+
+    </main>
+  </div>
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>
